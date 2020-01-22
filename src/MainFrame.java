@@ -1,7 +1,6 @@
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.table.JTableHeader;
 import java.awt.*;
+import java.util.Collections;
 
 public class MainFrame extends JFrame {
 
@@ -62,6 +61,7 @@ public class MainFrame extends JFrame {
         add(downPanel, BorderLayout.SOUTH);
         add(inputPanel,BorderLayout.NORTH);
         add(scrollPane,BorderLayout.CENTER);
+        table.setAutoCreateRowSorter(true);
 
 
         search.addActionListener(e->{
@@ -77,6 +77,7 @@ public class MainFrame extends JFrame {
         load.addActionListener(e->{
             Data data = new Data();
             data.setData(SaveHandler.load());
+            Collections.shuffle(data.getData());
             setUI(data);
             System.out.println("Načteno");
         });
