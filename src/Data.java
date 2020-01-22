@@ -8,6 +8,10 @@ public class Data {
         data = new ArrayList<>();
     }
 
+    public void setData(List<Item> data) {
+        this.data = data;
+    }
+
     public void addData(Item item){
         data.add(item);
     }

@@ -11,6 +11,10 @@ public class ProjectTableModel extends AbstractTableModel {
         fireTableDataChanged();
     }
 
+    public List<Item> getData() {
+        return data;
+    }
+
     public String[] getHeader() {
         return header;
     }
